@@ -1,0 +1,7 @@
+.container {
+  max-width: 736px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

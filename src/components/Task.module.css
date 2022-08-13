@@ -1,0 +1,58 @@
+.task {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  border: 1px solid var(--gray-00);
+  background-color: var(--gray-500);
+  border-radius: 8px;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.task + .task {
+  margin-top: 1rem;
+}
+
+.task input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.task label {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid var(--blue-400);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.task input:checked + label {
+  border: 2px solid var(--purple-700);
+  background-color: var(--purple-700);
+  background-image: url('../assets/checkmark.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.task input:checked + label + .taskText {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.taskText {
+  width: 100%;
+  max-width: 632px;
+  word-wrap: break-word;
+  margin-left: 0.75rem;
+  color: var(--gray-100);
+}
+
+.task button {
+  background: unset;
+  border: none;
+  cursor: pointer;
+}
+
+
